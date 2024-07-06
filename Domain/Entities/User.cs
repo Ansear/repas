@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    internal class User : BaseEntity
+    public class User : BaseEntity
     {
         public string? Nombre { get; set; }
         public string? Apellido { get; set; }

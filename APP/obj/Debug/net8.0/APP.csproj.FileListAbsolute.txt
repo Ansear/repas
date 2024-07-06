@@ -10,8 +10,9 @@ C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\AP
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.AssemblyInfoInputs.cache
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.AssemblyInfo.cs
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.csproj.CoreCompileInputs.cache
-C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.csproj.CopyComplete
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.dll
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\refint\APP.dll
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.pdb
 C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\ref\APP.dll
+C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.sourcelink.json
+C:\Users\sebas\Documents\Programacion\VS Community\repas\APP\obj\Debug\net8.0\APP.csproj.Up2Date
