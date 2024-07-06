@@ -1,0 +1,7 @@
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sebas\Documents\Programacion\VS Community\repas\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
