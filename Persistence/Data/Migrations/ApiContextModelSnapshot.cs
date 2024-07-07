@@ -94,25 +94,20 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.UserRol", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("RolId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId", "RolId");
 
                     b.HasIndex("RolId");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UsersRoles");
+                    b.ToTable("UserRol", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.UserRol", b =>

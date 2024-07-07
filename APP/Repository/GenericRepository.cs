@@ -43,10 +43,7 @@ namespace APP.Repository;
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public Task<T> GetByIdAsync(string id)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public virtual void Remove(T entity)
         {

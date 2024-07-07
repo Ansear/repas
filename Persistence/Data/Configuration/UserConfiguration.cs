@@ -26,14 +26,35 @@ namespace Persistence.Data.Configuration
             builder.Property(e => e.Num_Documento).IsRequired().HasMaxLength(50);
 
             builder.Property(e => e.Correo).IsRequired().HasMaxLength(50);
-            
+
             builder.Property(e => e.Usuario).IsRequired().HasMaxLength(50);
 
             builder.Property(e => e.Contraseña).IsRequired().HasMaxLength(50);
 
             builder.Property(e => e.Nombre).IsRequired().HasMaxLength(50);
 
-            builder.HasMany(e => e.UserRoles).WithOne(p => p.User).HasForeignKey(e => e.UserId);    
+            builder
+           .HasMany(p => p.Roles)
+           .WithMany(r => r.Users)
+           .UsingEntity<UserRol>(
+
+               j => j
+               .HasOne(pt => pt.Rol)
+               .WithMany(t => t.UserRoles)
+               .HasForeignKey(ut => ut.RolId),
+
+               j => j
+               .HasOne(et => et.User)
+               .WithMany(et => et.UserRoles)
+               .HasForeignKey(el => el.UserId),
+
+               j =>
+               {
+                   j.ToTable("UserRol");
+                   j.HasKey(t => new { t.UserId, t.RolId });
+
+               });
+            
         }
     }
 }

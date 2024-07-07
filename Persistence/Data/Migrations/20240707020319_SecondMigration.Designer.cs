@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    [Migration("20240706173233_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20240707020319_SecondMigration")]
+    partial class SecondMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,25 +97,20 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.UserRol", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("RolId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId", "RolId");
 
                     b.HasIndex("RolId");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UsersRoles");
+                    b.ToTable("UserRol", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.UserRol", b =>

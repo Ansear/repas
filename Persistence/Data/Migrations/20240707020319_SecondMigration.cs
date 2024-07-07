@@ -5,7 +5,7 @@
 namespace Persistence.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class SecondMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -44,25 +44,24 @@ namespace Persistence.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UsersRoles",
+                name: "UserRol",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    RolId = table.Column<int>(type: "int", nullable: false)
+                    RolId = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UsersRoles", x => x.Id);
+                    table.PrimaryKey("PK_UserRol", x => new { x.UserId, x.RolId });
                     table.ForeignKey(
-                        name: "FK_UsersRoles_Rol_RolId",
+                        name: "FK_UserRol_Rol_RolId",
                         column: x => x.RolId,
                         principalTable: "Rol",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UsersRoles_User_UserId",
+                        name: "FK_UserRol_User_UserId",
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
@@ -70,21 +69,16 @@ namespace Persistence.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_UsersRoles_RolId",
-                table: "UsersRoles",
+                name: "IX_UserRol_RolId",
+                table: "UserRol",
                 column: "RolId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UsersRoles_UserId",
-                table: "UsersRoles",
-                column: "UserId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "UsersRoles");
+                name: "UserRol");
 
             migrationBuilder.DropTable(
                 name: "Rol");
